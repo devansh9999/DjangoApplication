@@ -1,0 +1,57 @@
+{%extends 'Base.html'%}
+{%load static%}
+{%block body%}
+<div class="container">
+<div class="col s12 m7">
+    <h2 class="header">LOGIN</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="{%static 'images/Java.jpg'%}">
+      </div>
+      <div class="card-stacked">
+        <form action="" method="post">
+          {% csrf_token %}
+        <div class="card-content">
+         
+            {{form}}
+          
+          
+        </div>
+        <div class="card-action">
+          <div class="row">
+            <div class="col s9"></div>
+            <div >
+              <button class="right-align btn" type="submit">SUBMIT</button>
+            </div>
+          </div>
+          
+        </div>
+
+        
+      </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<style>
+  .card-stacked{
+    margin-top: 30px;
+  }
+  .btn{
+    margin-top: 37px;
+    margin-left: 30px;
+    margin-right: 10px;
+  }
+  .btn{
+        
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+</style>
+  {%endblock%}

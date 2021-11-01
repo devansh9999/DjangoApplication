@@ -1,0 +1,92 @@
+{%extends 'Base.html'%}
+{%load static%}
+{%block body%}
+
+<nav class="nav-extended blue">
+    <div class="nav-wrapper">
+      <a href="https://hack.codingblocks.com/app/contests/2628" class="brand-logo"><img style="margin: 10px;" class="responsive-img" width="55" src="{%static 'images/Logo2.png'%}" ></a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{%url 'AddData' %}">Add Questions</a></li>
+        <li><a href="{%url 'Notes' %}">Add Notes</a></li>
+        <li><a href="{%url 'NotesView' %}">Notes</a></li>
+        <li><a href="{%url 'Logout' %}?next=/">Logout</a></li>
+        
+      </ul>
+    </div>
+    <div class="nav-content">
+      <ul class="tabs tabs-transparent ">
+        <li class="tab"><a href="#test1">Questions</a></li>
+        <li class="tab"><a class="active" href="#test2">Hints</a></li>
+        
+        
+      </ul>
+    </div>
+  </nav>
+
+ 
+
+  <div id="test1" class="col s12">
+    <table>
+        <thead>
+          <tr>
+              <th>Question No</th>
+              <th>Question</th>
+              <th>Type</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {%for ele in Quests%}
+          <tr>
+            <td>{{ele.Question_No}}</td>
+            <td>{{ele.Question}}</td>
+            <td>{{ele.Type}}</td>
+          </tr>
+          {%endfor%}
+      
+        </tbody>
+      </table>
+  </div>
+  <div id="test2" class="col s12">
+    <table>
+      <col style="width:39.5%">
+      <col style="width:39.5%">
+        <thead>
+          <tr>
+              <th>Question No</th>
+              <th>Algorithm</th>
+              <th>Solution</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            {%for ele in Quests%}
+          <tr>
+            <td>{{ele.Question_No}}</td>
+            <td>{{ele.Algorithm}}</td>
+            <td>{{ele.Solution}}</td>
+          </tr>
+          {%endfor%}
+      
+        </tbody>
+      </table>
+  </div>
+  <div id="test3" class="col s12">
+
+  
+
+  </div>
+  
+</nav>        
+  <script>
+     M.AutoInit();
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+  });
+
+
+        
+  </script>
+{%endblock%}

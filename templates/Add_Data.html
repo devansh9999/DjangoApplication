@@ -1,0 +1,35 @@
+{%extends 'Base.html'%}
+
+{%load static%}
+{%block body%}
+<div class="container">
+    <h1 class="blue-text center-align">ADD QUESTION</h1>
+<form method="post">
+    {%csrf_token%}
+    
+    
+    
+    {{form}}
+      
+    
+    <button class="btn" type="submit">SUBMIT</button>
+</form>
+</div>
+<style>
+    *{
+        margin-left: 10px;
+    }
+    .btn{
+        margin-left: 975px;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+
+</style>
+{%endblock%}

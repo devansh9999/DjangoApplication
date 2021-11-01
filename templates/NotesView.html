@@ -1,0 +1,51 @@
+{%extends 'Base.html'%}
+{%load static%}
+{%block body%}
+<nav>
+    <div class="nav-wrapper blue">
+        <a href="https://github.com/Lakshya-CB/WeekendBatchSept" class="brand-logo"><img style="margin: 10px;" class="responsive-img" width="55" src="{%static 'images/Logo2.png'%}" ></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{%url 'AddData'%}">Add Questions</a></li>
+        <li><a href="{%url 'Notes'%}">Add Notes</a></li>
+        <li><a href="{%url 'Questions'%}#test1">Questions</a></li>
+        
+        <li><a href="{%url 'Logout'%}">Logout</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+ <div class="container">
+  <table>
+    <col style="width:30%">
+    <col style="width:30%">
+    <thead>
+      <tr>
+          <th>Topic</th>
+          <th>Notes</th>
+          <th>Image</th>
+          
+      </tr>
+    </thead>
+
+    <tbody>
+        {%for img in imgs%}
+      <tr>
+        <td>{{img.Topic}}</td>
+        <td>{{img.Notes}}</td>
+        <td>{%if img.Image %}
+            <img width="500px" src="{{img.Image.url}}">
+            {%else%}
+            Image Doesn't exist for this Topic
+            {%endif%}
+         </td>
+      </tr>
+      {%endfor%}
+  </table>
+</div>
+  
+  
+
+
+{%endblock%}
