@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY',default="")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =False
+DEBUG =True
 
 ALLOWED_HOSTS = [
     '*'
@@ -144,6 +144,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/Java/Questions#test1'
 
 MEDIA_URL ='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'img')
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 
 django_heroku.settings(locals())
