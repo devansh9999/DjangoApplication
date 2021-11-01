@@ -36,15 +36,15 @@ class ADD_DATA(LoginRequiredMixin,CreateView):
 #     success_url="/"
 #     context_object_name="Form"
 
-class Notes(LoginRequiredMixin,CreateView):
+class Doubts(LoginRequiredMixin,CreateView):
     login_url="/Login"
-    model=models.Notes
+    model=models.Doubts
     template_name='Notes.html'
     fields="__all__"
     success_url="/Java/Questions/Notes"
 
 class NotesView(LoginRequiredMixin,ListView):
     login_url="/Login"
-    model=models.Notes
+    model=models.Doubts
     template_name="NotesView.html"
     context_object_name="imgs"

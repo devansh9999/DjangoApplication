@@ -8,8 +8,8 @@
       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="{%url 'AddData' %}">Add Questions</a></li>
-        <li><a href="{%url 'Notes' %}">Add Notes</a></li>
-        <li><a href="{%url 'NotesView' %}">Notes</a></li>
+        <li><a href="{%url 'Notes' %}">Add Doubts</a></li>
+        <li><a href="{%url 'NotesView' %}">Doubts</a></li>
         <li><a href="{%url 'Logout' %}?next=/">Logout</a></li>
         
       </ul>
@@ -26,8 +26,9 @@
 
  
 
-  <div id="test1" class="col s12">
-    <table>
+  <div id="test1" class="col s11">
+    <table class="highlight ok">
+   
         <thead>
           <tr>
               <th>Question No</th>
@@ -48,8 +49,8 @@
         </tbody>
       </table>
   </div>
-  <div id="test2" class="col s12">
-    <table>
+  <div id="test2" class="col s11">
+    <table class="highlight ok">
       <col style="width:39.5%">
       <col style="width:39.5%">
         <thead>
@@ -89,4 +90,5 @@
 
         
   </script>
+
 {%endblock%}

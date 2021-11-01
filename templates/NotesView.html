@@ -22,9 +22,9 @@
     <col style="width:30%">
     <thead>
       <tr>
-          <th>Topic</th>
+          <th>S.No</th>
           <th>Notes</th>
-          <th>Image</th>
+          <th>Solution</th>
           
       </tr>
     </thead>
@@ -32,16 +32,9 @@
     <tbody>
         {%for img in imgs%}
       <tr>
-        <td>{{img.Topic}}</td>
-        <td>{{img.Notes}}</td>
-        <td>{%if img.Image %}
-             {{imgs.Image.url}} <br/><br/>
-                               
-            {{img.Image.url}}
-            {%else%}
-            Image Doesn't exist for this Topic
-            {%endif%}
-         </td>
+        <td>{{img.id}}</td>
+        <td>{{img.Doubts}}</td>
+        <td>{{img.Solution}}</td>
       </tr>
       {%endfor%}
   </table>

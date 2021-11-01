@@ -11,10 +11,10 @@ class AddData(models.Model):
     def __str__(self):
         return self.Type
 
-class Notes(models.Model):
-    Topic=models.CharField(max_length=1000)
-    Notes=models.TextField(max_length=10000,null=True,blank=True)
-    Image=models.ImageField(upload_to="image/",null=True,blank=True)
+class Doubts(models.Model):
+    
+    Doubts=models.TextField(max_length=10000,null=True,blank=True)
+    Solution=models.TextField(max_length=10000,null=True,blank=True)
 
     def __str__(self):
         return self.Topic

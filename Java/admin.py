@@ -3,5 +3,5 @@ from Java import models
 # Register your models here.
 admin.site.register([
     models.AddData,
-    models.Notes
+    models.Doubts
 ])
