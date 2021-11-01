@@ -28,7 +28,7 @@ class ADD_DATA(LoginRequiredMixin,CreateView):
     model=models.AddData
     template_name='Add_Data.html'
     fields="__all__"
-    success_url="/Questions#test1"
+    success_url="/Java/Questions#test1"
 
 # class Login(FormView):
 #     template_name='Login.html'
