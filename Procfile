@@ -1,1 +1,1 @@
-web : gunicorn JavaWeb.wsgi
+web:gunicorn JavaWeb.wsgi
