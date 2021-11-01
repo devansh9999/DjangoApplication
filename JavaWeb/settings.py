@@ -29,8 +29,9 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG =False
 
 ALLOWED_HOSTS = [
-    host.strip()
-    for host in config("ALLOWED_HOSTS",default='').split(',')
+    '*'
+    # host.strip()
+    # for host in config("ALLOWED_HOSTS",default='').split(',')
 ]
 
 
