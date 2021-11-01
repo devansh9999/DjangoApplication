@@ -35,8 +35,9 @@
         <td>{{img.Topic}}</td>
         <td>{{img.Notes}}</td>
         <td>{%if img.Image %}
-            <img width="500px" src="{{img.Image.url}}">
-            
+             {{imgs.Image.url}} <br/><br/>
+                               
+            {{img.Image.url}}
             {%else%}
             Image Doesn't exist for this Topic
             {%endif%}
