@@ -6,7 +6,7 @@ class AddData(models.Model):
     Type=models.TextField(max_length=20)
     Question=models.TextField(max_length=10000)
     Algorithm=models.TextField(default="-",blank=True)
-    Solution=models.TextField(max_length=10000)
+    Solution=models.URLField(max_length=10000)
 
     def __str__(self):
         return self.Type
